@@ -79,6 +79,10 @@
     cursor: pointer;
     animation: next 2s linear infinite;
   }
+  .image-active{
+    width: 100vw;
+    position: absolute;
+  }
   @keyframes previous{
     0%{
       left: 5vh;

@@ -1,0 +1,496 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    overflow: hidden;
+}
+.container-header-CD{
+    background: #343333 ;
+    width: 100%;
+}
+
+.header-CD{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+.logo-CD{
+    width: 82px;
+    height: auto;
+}
+.navbar-CD{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-CD a{
+    color: white;
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+.SVG-hide{
+    display: none;
+}
+
+.navbar-CD a::before{
+    width: 100%;
+    height: 1px;
+    background: #FF5700;
+    content: "";
+    display: block;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.8s;
+	-webkit-transform: scale(0,1);
+}
+
+.navbar-CD a:hover:before {
+    opacity: 1;
+	-webkit-transform: scale(1);
+}
+
+.navbar-CD a::after{
+    width: 100%;
+    height: 1px;
+    background: #FF5700;
+    content: "";
+    display: block;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.8s;
+	-webkit-transform: scale(0,1);
+}
+
+.navbar-CD a:hover:after {
+    opacity: 1;
+	-webkit-transform: scale(1);
+}
+
+.navbar-CD a:hover{
+    color: #FF5700;
+}
+
+.searchbar-CD{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FF5700;
+    border-radius: 5px;
+    width: 185px;
+    padding: 3px;
+}
+#search-CD{
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    width: 150px;
+}
+
+.searchbar-CD svg{
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.burger-menu-panier-CD{
+    display: flex;
+    flex-direction: row;
+}
+
+.burger-menu-panier-CD svg{
+    /* margin-right: 20px; */
+    cursor: pointer;
+}
+.burger-menu-panier-CD svg:hover{
+    -webkit-transform: scale(1.2);
+}
+.compte-CD svg{
+    margin-right: 20px;
+}
+#compteur-panier-CD{
+    position:absolute;
+    background:#FF5700;
+    color: black;
+    right: 20px;
+    top: 52px;
+    padding: 0px 3px;
+    font-size: 13px;
+    z-index:5;
+}
+.burger-menu-panier-CD svg:hover #compteur-panier-CD{
+    -webkit-transform: scale(1.2);
+}
+/* Menu burger */
+
+.burger-menu-CD{
+    display: none;
+    cursor: pointer;
+}
+.burger-menu-CD div{
+    width: 25px;
+    height: 3px;
+    background-color: #FF5700;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.sidebar-CD{
+    position: absolute;
+    width: 20%;
+    background: #343333 ;
+    height: 90vh;
+    transform: translateX(-300%);
+    transition: 0.5s ease-in-out;
+    z-index: 20;
+}
+.nav-active {
+    transform: translateX(0%);
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar-CD .navbar-CD1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar-CD1 .searchbar-CD{
+    margin: 20px 0px;
+}
+.navbar-CD1 a{
+    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    width: 100%;
+}
+.navbar-CD1 a:hover{
+    background: #FF5700;
+}
+.searchbar-CD1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FF5700;
+    border-radius: 5px;
+    width: 185px;
+    padding: 3px;
+    margin: 20px 0px;
+}
+#search-CD1{
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 5px;
+    width: 150px;
+}
+
+.searchbar-CD1 svg{
+    margin-right: 3px;
+    cursor: pointer;
+}
+/* LATERAL SIDEBAR PANIER */
+.sidebar-panier-CD{
+    position: absolute;
+    width: 380px;
+    right:0;
+    background: whitesmoke;
+    height: 90vh;
+    transform: translateX(300%);
+    transition: 0.5s ease-in-out;
+    z-index: 20;
+    padding: 30px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+}
+.nav-active-panier{
+    transform: translateX(0%);
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+.sidebar-panier-CD h2{
+    color:#FF5700;
+}
+.titre-panier-CD{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.titre-panier-CD img{
+    width: 30px;
+    height: auto;
+    margin-left: 20px;
+}
+.infos-panier-CD{
+    padding: 30px 0px;
+    display: flex;
+}
+.infos-jeu-CD img{
+    width: 130px;
+    height: auto;
+}
+.info-achat-CD{
+    padding: 0px 20px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info-achat-CD h3{
+    color: #343333;
+    font-size: 18px;
+}
+.info-achat-CD p span{
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF5700;
+}
+.prix-CD{
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.prix-CD p{
+    color: #343333;
+}
+.compteur-CD{
+    display: flex;
+    flex-direction: row;
+    width: 70px;
+    height: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+.plus-CD, .moins-CD{
+    background: #FF5700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.chiffre-panier-CD{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+.bouton-commander{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.commander-CD{
+    border: 1px solid grey;
+    border-radius: 20px;
+    background: white;
+    width: 120px;
+    height: 30px;
+    padding: 15px 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #343333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.commander-CD:hover{
+    background: #FF5700;
+    color: white;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.541);
+}
+.mention-panier-CD p{
+    font-style: italic;
+    color: rgb(141, 141, 141);
+    padding: 30px 0px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    background: #343333;
+    height: 100vh;
+}
+.mention-panier-CD p br{
+    margin-top: 10px;
+}
+/* Remplacer la sidebar panier par la commande terminée */
+.sidebar-panierDone-CD{
+    position: absolute;
+    width: 380px;
+    right:0;
+    background: whitesmoke;
+    height: 90vh;
+    transition: 0.5s ease-in-out;
+    z-index: 2;
+    padding: 30px;
+    display: none;
+    transform: translateX(300%);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav-active-panier2{
+    transform: translateX(0%);
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
+
+.info-panier-Done-CD{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info-panier-Done-CD h3{
+    font-size: 1.4em;
+    text-align: center;
+}
+#retour-site-CD{
+    width: 60px;
+    background: #343333;
+    color: white;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+/* Filtre Main quand on est dans le panier */
+.filter{
+    
+    filter: opacity(0.3);
+}
+/* Media Queries */
+@media screen and (max-width:1088px) {
+    .navbar-CD a{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .navbar-CD span{
+        font-size: 10px;
+    }
+    .SVG-hide{
+        display: block;
+        margin: 5px 0px;
+    }
+}
+@media screen and (max-width:850px){
+    .navbar-CD span{
+        display: none;
+    }
+}
+@media screen and (max-width:678px) {
+    .navbar-CD span{
+        display: none;
+    }
+    .SVG-hide{
+        display: none;
+    }
+    .burger-menu-CD{
+        display: block;
+        margin-left: 10px;
+    }
+    .searchbar-CD{
+        display: none;
+    }
+    .panier-CD{
+        margin-right: 25px;
+    }
+    #compteur-panier-CD{
+        right: 90px;
+    }
+    .sidebar-CD{
+        width: 225px;
+    }
+}
+
+@media screen and (max-width:464px) {
+    .burger-menu-panier-CD{
+        position: absolute;
+        right: 30px;
+    }
+    #compteur-panier-CD{
+        right: 70px;
+        top: 18px;
+    }
+    .sidebar-panier-CD{
+        width: 100%;
+        align-items: center;
+        height: auto;
+    }
+    .sidebar-panierDone-CD{
+        width: 100%;
+    }
+    .titre-panier-CD{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .titre-panier-CD img{
+        margin-bottom: 20px;
+    }
+    .infos-panier-CD{
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-achat-CD{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-achat-CD h3{
+        padding: 20px 0px;
+    }
+    .commander-CD{
+        margin-bottom: 0px;
+    }
+    .infos-panier-CD p{
+        margin-bottom: 20px;
+    }
+    .prix-CD p{
+        margin-bottom: 0px;
+    }
+
+}
+
+@media screen and (max-width:350px) {
+    .burger-menu-panier-CD{
+        position: absolute;
+        right: 20px;
+    }
+    #compteur-panier-CD{
+        right: 70px;
+        top: 18px;
+    }
+    .sidebar-CD{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-CD1{
+        padding: 10px 0;
+    }
+    
+}

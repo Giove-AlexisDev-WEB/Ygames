@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    width: 1000%;
+    overflow: hidden;
+    /* animation: animate 4s linear infinite; */
+}
+
+.item1{
+    background: url("https://cdn2.unrealengine.com/Epic+Games+Node%2Fut-1920x1080-416b0b679e572854df52c39154aff5945328c04d.jpg?resize=1&w=1920");
+    width: 650px;
+    height: 100vh;
+    transform: scale(1);
+  }
+  .item2{
+    background: url("https://cdn2.unrealengine.com/Epic+Games+Node%2Fue-alt-1920x1080-e653a4a4dae65307fd2420076abe44bb71b22f06.jpg?resize=1&w=1920");
+    width: 650px;
+    height: 100vh;
+  }
+  .item3{
+    background: url("https://cdn2.unrealengine.com/Epic+Games+Node%2Ffortnite-1920x1080-b981104fd54dd7013375f26bc9c98c9a2072819e.jpg?resize=1&w=1920");
+    width: 650px;
+    height: 100vh;
+  }
+  .item4{
+    background: url("https://cdn2.unrealengine.com/epichomepage-artboard-1-1920x1080-329693365.jpg?resize=1&w=1920");
+    width: 650px;
+    height: 100vh;
+  }
+  .item5{
+    background: url("https://cdn2.unrealengine.com/Epic+Games+Node%2Fbb-1920x1080-b9fc27cbe8c45c5682facc0d5f0626741e8e1dc5.jpg?resize=1&w=1920");
+    width: 650px;
+    height: 100vh;
+  }
+  .item6{
+    background: url("https://cdn2.unrealengine.com/Epic+Games+Node%2Frr-%283%29-1920x1080-ad5d59625dbced889ecb810293a416b25f9adad9.jpg?resize=1&w=1920");
+    width: 650px;
+    height: 100vh;
+  }
+  .item1:hover, .item2:hover, .item3:hover, .item4:hover, .item4:hover, .item5:hover, .item6:hover{
+    transform: scale(1.05);
+  }
+  .previous{
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 5vh;
+    top: 50vh;
+    cursor: pointer;
+    animation: previous 2s linear infinite;
+  }
+  .next{
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5vh;
+    top: 50vh;
+    cursor: pointer;
+    animation: next 2s linear infinite;
+  }
+  @keyframes previous{
+    0%{
+      left: 5vh;
+    }
+    50%{
+      left: 2vh;
+    }
+    100%{
+      left: 5vh;
+    }
+  }
+  @keyframes next{
+    0%{
+      right: 5vh;
+    }
+    50%{
+      right: 2vh;
+    }
+    100%{
+      right: 5vh;
+    }
+  }
+
+  @keyframes animate
+{
+    0%
+    {
+      transform: translateX(0px);
+    }
+    100%{
+      transform: translateX(-650px);
+    }
+}

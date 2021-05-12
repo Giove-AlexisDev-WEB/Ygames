@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-footer-CD{
+    background: #343333;
+    padding: 10px;
+    z-index: 15;
+    position: relative;
+}
+
+.mention-CD a{
+    text-decoration: none;
+    color: white;
+}
+.mention-CD a span{
+    padding: 0px 10px;
+}
+
+.social-network-CD{
+    margin: 25px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-network-CD svg{
+    margin-right: 15px;
+}
+
+.bas-footer-CD{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom : -20px;
+}
+
+.google-avis-CD{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-google-CD{
+    width: 35px;
+    height: auto;
+}
+
+.copyright-CD{
+    color: white;
+    text-align: center;
+}
+
+.partenaire-CD{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.partenaire-CD img{
+    margin-right: 10px;
+}
+.micromania-CD{
+    width: 100px;
+    height: auto;
+}
+.steam-CD{
+    width: 80px;
+    height: auto;
+}
+.twitch-CD{
+    width: 70px;
+    height: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .bas-footer-CD{
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .partenaire-CD{
+        flex-wrap: wrap;
+    }
+
+    .partenaire-CD img{
+        margin-top: 20px;
+    }
+}

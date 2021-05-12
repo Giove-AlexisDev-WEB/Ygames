@@ -1,95 +1,117 @@
 
 /* la boite de dialogue qui affiche soit le formulaire de connexion ou de créer un nouveau compte */
+/* .container-compte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
 #boitedialogueAM {
     padding: 20px;
     border-radius: 20px;
     width: 680px;
     background-color: #343333;
     display: flex;
+    justify-content: center;
     transform: translateY(-200%);
     transition: transform 0.2s;
     box-shadow: 2px, 2px, 2px grey;
     font-family: 'Poppins', sans-serif;
-    opacity: 90%;
     z-index: 100;
     position: absolute;
-    margin-left: 37%;
-    margin-top: 0%;
-    border: white solid 3px;
 } 
+.active{
+    top: 1100px;
+    left: 615px;
+    transform: translateY(0%);
+}
 
 /* la partie connexion (pour les utilisateurs existant déjà) */
 #connectAM{
     border-left:  #FF5700 solid 2px;
-    padding-left: 3%;
-    padding-left: 3%;
+    padding-left: 40px;
 }
 /* la partie qui permet de créer un nouveau utilisateur */
+.registerAM{
+    font-size: 1.3em;
+    color: white;
+}
 
 #newuserAM{
-    margin-right: 1%;
+    margin-right: 35px;
 }
 
-.Input {
-    margin: 12px;
-    width: 90%;
+#newuserAM input[type="text"] {
+    margin: 15px 0px;
+    width: 250px;
     height: 2em;
-    padding-left: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
 }
-
+#connectAM input{
+    margin: 15px 0px;
+    width: 250px;
+    height: 2em;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+#connectAM button{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FF5700;
+    color: white;
+    padding: 5px 15px;
+    width: 130px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    margin-top: 15px;
+}
 #conditionsAM {
     font-size: 12.2px;
     color: white;
 }
 
 #btnnewuserAM{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #FF5700;
-    border: 1px solid black;
-    padding: 5px;
-    margin-left: 20%;
-    border-radius: 2px;
-    width: 160px;
-    font-size: 1.1em;
+    padding: 5px 15px;
+    color: white;
+    width: 190px;
+    font-size: 1em;
     cursor: pointer;
     border-radius: 20px;
-
+    border: none;
 }
 
 #consentAM{
     width: 1em;
     height: 1em;
+    display: flex;
+    align-items: center;
 }
 
 #btnloginAM {
     
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #FF5700;
     border: 1px solid black;
     padding: 5px;
     margin-left: 20%;
     border-radius: 2px;
     width: 160px;
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     border-radius: 20px;
 
 }
 
-#btnnewuserAM:hover, #btnloginAM:hover {
-
-    /* L'image est grossie de 25% */
--webkit-transform:scale(1.25); /* Safari et Chrome */
--moz-transform:scale(1.25); /* Firefox */
--ms-transform:scale(1.25); /* Internet Explorer 9 */
--o-transform:scale(1.25); /* Opera */
-transform:scale(1.25);
-}
-
 .descriptionsAM{
-color: aliceblue;
-font-size: 1.3em;
-margin-bottom: 20px;}
+    color: white;
+    font-size: 1.3em;
+}
 
 @media screen and (max-width : 1080px) {
 
@@ -145,11 +167,10 @@ margin-bottom: 20px;}
         padding: 5px;
         margin-left: 20%;
         border-radius: 2px;
-        width: max-content;
         font-size: 1.1em;
         cursor: pointer;
         border-radius: 20px;
-    
+        width: 150px;
     }
     
     #consentAM{

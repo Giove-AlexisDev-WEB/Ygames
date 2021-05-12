@@ -87,38 +87,41 @@
         </div>
     </div>
     <!-- la boite de dialogue quand le logo user est cliqué -->
-    <div id="boitedialogueAM" class="active">   
-        <!-- la partie formulaire nouveau utilisateur -->
-        <div id="newuserAM">
-            <p class="registerAM"> nouveau utilisateur? créer un compte</p>
-            <form action="" method="get">
-                <label for="nom"></label>
-                <input type="text" id="nomAM" class="spaceform"  name="nomdefamille" placeholder="Nom de famille" required> <br>
-                <label for="prenom"></label>
-                <input type="text" id="prénomAM" class="spaceform"placeholder="Prénom" name="prenom" required><br>
-                <label for="mail"></label>
-                <input type="email" placeholder="Votre mail" name="e-mail" id="mailAM" class="spaceform"required><br>
-                <label for="motdepass"></label>
-                <input type="password" placeholder="Saisissez un mot de passe" class="spaceform" required><br>
-                <label id="conditionsAM" for="consentAM">J'accepte les conditions générales d'utilisation*</label>
-                <input type="checkbox" class="spaceform" name="conditions" id="consentAM"><br>
-                <input id="btnnewuserAM" type="button" value="créer mon compte"class="spaceform">
-                
-            </form>
+    <div class="container-compte">
+        <div id="boitedialogueAM">   
+            <!-- la partie formulaire nouveau utilisateur -->
+            <div id="newuserAM">
+                <p class="registerAM"> Créer un compte</p>
+                <form class="formulaire-AM" action="" method="get">
+                    <label for="nom"></label>
+                    <input type="text" id="nomAM" class="spaceform"  name="nomdefamille" placeholder="Nom" required> <br>
+                    <label for="prenom"></label>
+                    <input type="text" id="prénomAM" class="spaceform"placeholder="Prénom" name="prenom" required><br>
+                    <label for="mail"></label>
+                    <input type="text" placeholder="E-mail" name="e-mail" id="mailAM" class="spaceform"required><br>
+                    <label for="motdepass"></label>
+                    <input type="text" placeholder="Mot de passe" class="spaceform" required><br>
+                    <label id="conditionsAM" for="consentAM">J'accepte les conditions générales d'utilisation*</label>
+                    <input type="checkbox" class="spaceform" name="conditions" id="consentAM"><br>
+                    <input id="btnnewuserAM" type="button" value="Créer mon compte"class="spaceform">
+                    
+                </form>
+            </div>
+            <!-- la partie connexion pour un utilisateur déjà enregistré -->
+            
+            <div id="connectAM">
+                <p class="descriptionsAM">Connexion </p>
+                <form>
+                    <label for="mail"></label>
+                    <input class="connexAM"type="text" placeholder="Email" name="e-mail" id="mailAM" class="spaceform"required><br>
+                    <label for="motdepass"></label>
+                    <input class="connexAM" type="text" placeholder=" Mot de passe" class="spaceform" required><br>
+                    <button id="connexion">Connexion</button>
+        
+                </form>
+            </div>
         </div>
-        <!-- la partie connexion pour un utilisateur déjà enregistré -->
-        <div id="connectAM">
-            <p class="descriptionsAM">connexion: </p>
-            <form>
-                <label for="mail"></label>
-                <input class="connexAM"type="email" placeholder="Votre mail" name="e-mail" id="mailAM" class="spaceform"required><br>
-                <label for="motdepass"></label>
-                <input class="connexAM" type="password" placeholder=" Mot de passe" class="spaceform" required><br>
-                <input id="btnloginAM" type="button" value="connecter"class="spaceform">
-      
-            </form>
-        </div>
-      </div>
+    </div>
     <!-- LATERAL SIDEBAR PANIER -->
     <div class="sidebar-panier-CD">
         <div class="titre-panier-CD">

@@ -87,38 +87,41 @@
         </div>
     </div>
     <!-- la boite de dialogue quand le logo user est cliqué -->
-    <div id="boitedialogueAM" class="active">   
-    <!-- la partie formulaire nouveau utilisateur -->
-    <div id="newuserAM">
-        <p class="registerAM"> nouveau utilisateur? créer un compte</p>
-        <form action="" method="get">
-            <label for="nom"></label>
-            <input type="text" id="nomAM" class="spaceform"  name="nomdefamille" placeholder="Nom de famille" required> <br>
-            <label for="prenom"></label>
-            <input type="text" id="prénomAM" class="spaceform"placeholder="Prénom" name="prenom" required><br>
-            <label for="mail"></label>
-            <input type="email" placeholder="Votre mail" name="e-mail" id="mailAM" class="spaceform"required><br>
-            <label for="motdepass"></label>
-            <input type="password" placeholder="Saisissez un mot de passe" class="spaceform" required><br>
-            <label id="conditionsAM" for="consentAM">J'accepte les conditions générales d'utilisation*</label>
-            <input type="checkbox" class="spaceform" name="conditions" id="consentAM"><br>
-            <input id="btnnewuserAM" type="button" value="créer mon compte"class="spaceform">
+    <div class="container-compte">
+        <div id="boitedialogueAM">   
+            <!-- la partie formulaire nouveau utilisateur -->
+            <div id="newuserAM">
+                <p class="registerAM"> Créer un compte</p>
+                <form class="formulaire-AM" action="" method="get">
+                    <label for="nom"></label>
+                    <input type="text" id="nomAM" class="spaceform"  name="nomdefamille" placeholder="Nom" required> <br>
+                    <label for="prenom"></label>
+                    <input type="text" id="prénomAM" class="spaceform"placeholder="Prénom" name="prenom" required><br>
+                    <label for="mail"></label>
+                    <input type="text" placeholder="E-mail" name="e-mail" id="mailAM" class="spaceform"required><br>
+                    <label for="motdepass"></label>
+                    <input type="text" placeholder="Mot de passe" class="spaceform" required><br>
+                    <label id="conditionsAM" for="consentAM">J'accepte les conditions générales d'utilisation*</label>
+                    <input type="checkbox" class="spaceform" name="conditions" id="consentAM"><br>
+                    <input id="btnnewuserAM" type="button" value="Créer mon compte"class="spaceform">
+                    
+                </form>
+            </div>
+            <!-- la partie connexion pour un utilisateur déjà enregistré -->
             
-        </form>
+            <div id="connectAM">
+                <p class="descriptionsAM">Connexion </p>
+                <form>
+                    <label for="mail"></label>
+                    <input class="connexAM"type="text" placeholder="Email" name="e-mail" id="mailAM" class="spaceform"required><br>
+                    <label for="motdepass"></label>
+                    <input class="connexAM" type="text" placeholder=" Mot de passe" class="spaceform" required><br>
+                    <button id="connexion">Connexion</button>
+        
+                </form>
+            </div>
+        </div>
     </div>
-    <!-- la partie connexion pour un utilisateur déjà enregistré -->
-    <div id="connectAM">
-        <p class="descriptionsAM">connexion: </p>
-        <form>
-            <label for="mail"></label>
-            <input class="connexAM"type="email" placeholder="Votre mail" name="e-mail" id="mailAM" class="spaceform"required><br>
-            <label for="motdepass"></label>
-            <input class="connexAM" type="password" placeholder=" Mot de passe" class="spaceform" required><br>
-            <input id="btnloginAM" type="button" value="connecter"class="spaceform">
-  
-        </form>
-    </div>
-  </div>
     <!-- LATERAL SIDEBAR PANIER -->
     <div class="sidebar-panier-CD">
         <div class="titre-panier-CD">
@@ -175,42 +178,45 @@
             <button id="retour-site-CD">Retour</button>
         </div>
     </div>
-    
-    <div class="container">
-        <div class="previous">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FF5700" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-            </svg>
-        </div>
-        <div class="slider slide">
-            <div class="item1">
+    <!-- Caroussel -->
+    <main id="filter">
+        <div class="container">
+            <div class="previous">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FF5700" class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                    <path fill-rule="evenodd" d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg>
+            </div>
+            <div class="slider slide">
+                <div class="item1">
+                    
+                </div>
+                <div class="item2">
                 
-            </div>
-            <div class="item2">
-            
-            </div>
-            <div class="item3">
-                
-            </div>
-            <div class="item4">
+                </div>
+                <div class="item3">
+                    
+                </div>
+                <div class="item4">
 
-            </div>
-            <div class="item5">
+                </div>
+                <div class="item5">
+                    
+                </div>
+                <div class="item6" focus>
                 
+                </div>
             </div>
-            <div class="item6" focus>
-            
-            </div>
+            <div class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FF5700" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>    
         </div>
-        <div class="next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FF5700" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
-                <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-        </div>    
-    </div>
+    </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container-footer-CD">
             <div class="mention-CD">
